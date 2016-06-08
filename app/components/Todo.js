@@ -3,20 +3,21 @@ import { PropTypes } from 'react'
 
 const styles = StyleSheet.create({
   todo: {
-    marginBottom: 10,
-    borderWidth: 1,
-    fontSize: 20
+    flexDirection: 'row',
+    padding: 10,
+    backgroundColor: '#F6F6F6',
+  },
+  complete: {
+    textDecorationLine: 'line-through',
+    textDecorationStyle: 'solid',
+    textDecorationColor: '#000'
   }
 })
 
 
 const Todo = ({ onPress, completed, text }) => (
-  <TouchableOpacity onPress={onPress}>
-    <Text
-      style={{
-        textDecoration: completed ? 'line-through' : 'none'
-      }}
-    >
+  <TouchableOpacity style={styles.todo} onPress={onPress}>
+    <Text style={completed ? styles.complete : ''}>
       {text}
     </Text>
   </TouchableOpacity>

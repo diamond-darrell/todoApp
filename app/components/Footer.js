@@ -4,6 +4,7 @@ import FilterLink from '../containers/FilterLink'
 const styles = StyleSheet.create({
   footer: {
     paddingTop:30,
+    paddingBottom:100,
     flexDirection:'row'
   }
 })

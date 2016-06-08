@@ -10,11 +10,17 @@ import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
 const styles = StyleSheet.create({
+  buttonText: {
+    fontSize: 18,
+    color: 'white',
+    alignSelf: 'center'
+  },
   button: {
-    color: '#FFDC73',
-    backgroundColor: '#033E6B',
-    margin: 10,
-    borderWidth: 1
+    height: 44,
+    flexDirection: 'row',
+    backgroundColor: '#48BBEC',
+    alignSelf: 'stretch',
+    justifyContent: 'center'
   }
 })
 
@@ -28,7 +34,7 @@ let AddTodo = ({ dispatch }) => {
     <View>
       <TextInput onChangeText={text => setInputText(text)}/>
       <TouchableHighlight onPress={onPress} style={styles.button}>
-        <Text>Add Todo</Text>
+        <Text style={styles.buttonText}>Add Todo</Text>
       </TouchableHighlight>
     </View>
   )

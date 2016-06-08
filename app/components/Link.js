@@ -1,10 +1,18 @@
 
-import React, { Text, TouchableOpacity } from 'react-native'
+import React, { Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { PropTypes } from 'react'
+
+const styles = StyleSheet.create({
+  active: {
+    textDecorationLine: 'underline',
+    textDecorationStyle: 'solid',
+    textDecorationColor: '#000'
+  }
+})
 
 const Link = ({ active, children, onPress }) => {
   if (active) {
-    return <Text>{children}</Text>
+    return <Text style={styles.active}>{children}</Text>
   }
 
   return (
